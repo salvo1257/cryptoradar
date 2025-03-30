@@ -3,16 +3,17 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>CryptoRadar - App Completa</title>
+  <title>CryptoRadar - Versione Completa</title>
   <style>
-    body { background: #121212; color: #fff; font-family: Arial; padding: 20px; }
+    body { background: #111; color: #fff; font-family: Arial; padding: 20px; }
     h1, h2 { color: #00ffe7; }
     .section { margin-bottom: 30px; }
     .box { background: #1f1f1f; padding: 15px; border-radius: 10px; margin-top: 10px; }
+    button { margin-top: 10px; padding: 10px 20px; font-size: 16px; background: #00ffd5; border: none; border-radius: 8px; cursor: pointer; }
   </style>
 </head>
 <body>
-  <h1>📊 CryptoRadar</h1>
+  <h1>📊 CryptoRadar - Versione Completa</h1>
 
   <div class="section">
     <h2>🧠 Pattern Grafici</h2>
@@ -43,5 +44,25 @@
     <div class="box">⭐ Falling Wedge – +4.8% medio – 87% successo</div>
     <div class="box">⭐ Bull Flag – +3.2% medio – 79% successo</div>
   </div>
+
+  <div class="section">
+    <h2>🔔 Alert Sonoro (LONG)</h2>
+    <div class="box">
+      BTC ha raggiunto il livello per mediazione LONG<br/>
+      <button onclick="stopSound()">🔕 Ferma Allarme</button>
+      <audio id="alertSound" autoplay loop>
+        <source src="alert.mp3" type="audio/mpeg">
+        Il tuo browser non supporta l'audio.
+      </audio>
+    </div>
+  </div>
+
+  <script>
+    function stopSound() {
+      const sound = document.getElementById("alertSound");
+      sound.pause();
+      sound.currentTime = 0;
+    }
+  </script>
 </body>
 </html>
