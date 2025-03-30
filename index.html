@@ -2,85 +2,61 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <title>CryptoRadar Completo</title>
-  <style>
-    body { background: #111; color: #fff; font-family: Arial; padding: 20px; }
-    h1, h2 { color: #00ffe7; }
-    .section { margin-bottom: 30px; }
-    .box { background: #1f1f1f; padding: 15px; border-radius: 10px; margin-top: 10px; }
-    img { width: 100%; max-width: 400px; border-radius: 8px; margin-top: 10px; }
-    button { margin-top: 10px; padding: 10px 20px; font-size: 16px; background: #00ffd5; border: none; border-radius: 8px; cursor: pointer; }
-  </style>
+    <meta charset="UTF-8">
+    <title>CryptoRadar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #111; color: #0ff; margin: 20px; }
+        section { margin-bottom: 30px; padding: 10px; background-color: #222; border-radius: 8px; }
+        h2 { color: #fff; }
+        .alert { color: #ff5050; font-weight: bold; }
+        .box { background-color: #000; color: #0f0; padding: 8px; margin-top: 5px; }
+    </style>
 </head>
 <body>
-  <h1>📊 CryptoRadar</h1>
+    <h1>🚀 CryptoRadar</h1>
 
-  <div class="section">
-    <h2>🧠 Pattern Grafici con Immagini</h2>
-    <div class="box">
-      🔺 Head & Shoulders – 4H – SHORT – 30/03 – 08:30
-      <img src="pattern-hs.png" alt="Head & Shoulders" />
-    </div>
-    <div class="box">
-      🔻 Double Bottom – 1D – LONG – 29/03 – 21:00
-      <img src="pattern-db.png" alt="Double Bottom" />
-    </div>
-  </div>
+    <section>
+        <h2>📊 Pattern Grafici con Immagini</h2>
+        <div class="box">✅ Head & Shoulders (SHORT)</div>
+        <div class="box">✅ Double Bottom (LONG)</div>
+    </section>
 
-  <div class="section">
-    <h2>📉 Candlestick Pattern</h2>
-    <div class="box">
-      📈 Bullish Engulfing – 1H – Target +2.3% – LONG
-      <img src="candle-engulfing.png" alt="Engulfing" />
-    </div>
-    <div class="box">
-      ⚠️ Doji – 30min – Inversione probabile
-      <img src="candle-doji.png" alt="Doji" />
-    </div>
-  </div>
+    <section>
+        <h2>📉 Candlestick Pattern</h2>
+        <div class="box">✅ Bullish Engulfing — Target +2.3%</div>
+        <div class="box">✅ Doji — Inversione probabile</div>
+    </section>
 
-  <div class="section">
-    <h2>🐋 Whale Alert</h2>
-    <div class="box">🔵 LONG – Entry $66.200 – 4H</div>
-    <div class="box">🔴 SHORT – Entry $70.800 – 1H</div>
-  </div>
+    <section>
+        <h2>🐋 Whale Alert</h2>
+        <div class="box">🔵 LONG @ 66.200</div>
+        <div class="box">🔴 SHORT @ 70.800</div>
+    </section>
 
-  <div class="section">
-    <h2>📍 Supporti e Resistenze</h2>
-    <div class="box">🟢 Supporto 4H – $64.500 – Distanza: -3.4%</div>
-    <div class="box">🔴 Resistenza 1D – $71.200 – Distanza: +4.1%</div>
-  </div>
+    <section>
+        <h2>📌 Supporti e Resistenze</h2>
+        <div class="box">🟢 Supporto 4H @ 64.500 (-3.4%)</div>
+        <div class="box">🔴 Resistenza 1D @ 71.200 (+4.1%)</div>
+    </section>
 
-  <div class="section">
-    <h2>📅 Pattern Top 30 Giorni</h2>
-    <div class="box">⭐ Falling Wedge – +4.8% medio – 87% successo</div>
-    <div class="box">⭐ Bull Flag – +3.2% medio – 79% successo</div>
-  </div>
+    <section>
+        <h2>🔔 Alert Sonoro</h2>
+        <div class="alert">BTC ha raggiunto il livello per mediazione LONG!</div>
+        <button onclick="stopAlert()">🛑 Ferma Allarme</button>
+    </section>
 
-  <div class="section">
-    <h2>🔔 Alert Sonoro</h2>
-    <div class="box">
-      BTC ha raggiunto il livello per mediazione LONG
-      <button onclick="stopSound()">🔕 Ferma Allarme</button>
-      <audio id="alertSound" autoplay loop>
-        <source src="alert.mp3" type="audio/mpeg">
-      </audio>
-    </div>
-  </div>
+    <section>
+        <h2>🗞️ News Crypto (Live)</h2>
+        <div class="box">📰 BTC raggiunge nuovi massimi del trimestre</div>
+        <div class="box">📰 ETF USA spingono il mercato al rialzo</div>
+    </section>
 
-  <div class="section">
-    <h2>📰 News Crypto (Live)</h2>
-    <div class="box">🗞️ “BTC raggiunge nuovi massimi del trimestre” – CoinDesk – 30/03 10:12</div>
-    <div class="box">🗞️ “ETF spot USA spingono il mercato al rialzo” – Cointelegraph – 30/03 09:48</div>
-  </div>
-
-  <script>
-    function stopSound() {
-      const sound = document.getElementById("alertSound");
-      sound.pause();
-      sound.currentTime = 0;
-    }
-  </script>
+    <script>
+        function stopAlert() {
+            alert("Allarme fermato");
+        }
+    </script>
 </body>
 </html>
